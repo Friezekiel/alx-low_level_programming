@@ -1,27 +1,23 @@
 #include "main.h"
+
 /**
- *print_array - print n element of array
- *@a: array
- *@n: number of elements
- *Return: nothing
- */
-void print_array(int *a, int n)
+ *  * _strcpy - Copy paste string
+ *   * @dest: destination
+ *    * @src: source
+ *     *
+ *      * Return: destination
+ *       */
+
+char *_strcpy(char *dest, char *src)
 {
-	int inc;
+	int inc = 0;
 
-	for (inc = 0; inc < n; inc++)
-
+	while (*(src + inc) != '\0')
 	{
-
-	if (inc != n - 1)
-
-	printf("%d, ", a[inc]);
-
-	else
-
-	printf("%d", a[inc]);
-
+		*(dest + inc) = *(src + inc);
+		inc++;
 	}
+	*(dest + inc) = '\0';
 
-	printf("\n");
+	return (dest);
 }
